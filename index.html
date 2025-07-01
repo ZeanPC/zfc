@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zean Foto Copy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #89CFF0;
+      --dark: #023e8a;
+      --white: #ffffff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--white);
+      color: #333;
+    }
+    header {
+      background-color: var(--primary);
+      padding: 60px 20px;
+      text-align: center;
+      color: var(--dark);
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    nav {
+      background-color: var(--white);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: var(--primary);
+      transform: scale(1.1);
+    }
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section:nth-child(even) {
+      background-color: #f0faff;
+    }
+    h2 {
+      text-align: center;
+      color: var(--dark);
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .menu-item img {
+      width: 180px;
+      border-radius: 12px;
+    }
+    .menu-item button {
+      background-color: var(--primary);
+      color: var(--dark);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+      margin-top: 10px;
+    }
+    .menu-item button:hover {
+      background-color: var(--dark);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .contact-button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: var(--dark);
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .contact-button:hover {
+      background-color: var(--dark);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+    form {
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+    }
+    form button {
+      background-color: var(--primary);
+      color: var(--dark);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    form button:hover {
+      background-color: var(--dark);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Zean Foto Copy</h1>
+  <p>Solusi Cetak, Fotocopy, dan Pembayaran Anda!</p>
+</header>
+
+<nav>
+  <a href="#tentang">Tentang Kami</a>
+  <a href="#menu">Menu</a>
+  <a href="#form">Form Pemesanan</a>
+  <a href="#alamat">Alamat Kami</a>
+  <a href="#kontak">Kontak Kami</a>
+</nav>
+
+<section id="tentang">
+  <h2>Tentang Zean Foto Copy</h2>
+  <p style="text-align: center;">
+    Zean Foto Copy adalah layanan fotocopy, cetak, dan pembayaran yang berlokasi di Jl. Tarantang-Harau No.8, dekat SMP 3 Tarantang, SMA 2 Harau, dan Zean Gas. Kami melayani berbagai kebutuhan Anda dengan cepat, mudah, dan terpercaya.
+  </p>
+</section>
+
+<section id="menu">
+  <h2>Menu yang Bisa Dipesan</h2>
+
+  <div class="menu-item">
+    <img src="https://i.ibb.co/Ch3hNvx/setor-tarik.png" alt="Setor/Tarik Tunai">
+    <div>
+      <h3>Setor / Tarik Tunai</h3>
+      <p>Layanan setor atau tarik tunai cepat dan aman.</p>
+      <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20memesan%20Setor/Tarik%20Tunai')">Pesan via WhatsApp</button>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="https://i.ibb.co/TMDpyLW/print.png" alt="Print">
+    <div>
+      <h3>Print</h3>
+      <p>Layanan print dokumen hitam putih atau warna berkualitas.</p>
+      <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20memesan%20Print')">Pesan via WhatsApp</button>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="https://i.ibb.co/2FsfXqk/fotocopy.png" alt="Fotocopy">
+    <div>
+      <h3>Fotocopy</h3>
+      <p>Fotocopy dokumen dengan hasil tajam dan bersih.</p>
+      <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20memesan%20Fotocopy')">Pesan via WhatsApp</button>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="https://i.ibb.co/vB2tnQW/pembayaran.png" alt="Pembayaran Tagihan">
+    <div>
+      <h3>Pembayaran Tagihan</h3>
+      <p>Bayar tagihan PDAM, PLN, dan lainnya dengan mudah.</p>
+      <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20membayar%20tagihan')">Pesan via WhatsApp</button>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="https://i.ibb.co/ZK9nbF2/gas.png" alt="Gas">
+    <div>
+      <h3>Gas</h3>
+      <p>Pembelian Gas untuk kebutuhan rumah tangga. Klik tombol untuk menuju website.</p>
+      <button onclick="window.location.href='https://example.com'">Kunjungi Website Gas</button>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="https://i.ibb.co/09xqg0j/lainnya.png" alt="Lainnya">
+    <div>
+      <h3>Dan Lain-Lain</h3>
+      <p>Layanan lainnya sesuai kebutuhan Anda. Silakan hubungi kami.</p>
+      <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20menanyakan%20layanan%20lainnya')">Pesan via WhatsApp</button>
+    </div>
+  </div>
+
+</section>
+
+<section id="form">
+  <h2>Form Pemesanan</h2>
+  <form onsubmit="return submitForm();">
+    <label>Nama:</label>
+    <input type="text" id="nama" required>
+
+    <label>Nomor HP:</label>
+    <input type="text" id="nomor" required>
+
+    <label>Pilih Layanan:</label>
+    <select id="layanan" required>
+      <option value="">-- Pilih --</option>
+      <option value="Setor/Tarik Tunai">Setor/Tarik Tunai</option>
+      <option value="Print">Print</option>
+      <option value="Fotocopy">Fotocopy</option>
+      <option value="Pembayaran Tagihan">Pembayaran Tagihan</option>
+      <option value="Gas">Gas</option>
+      <option value="Lainnya">Lainnya</option>
+    </select>
+
+    <label>Pesan atau Keterangan Tambahan:</label>
+    <textarea id="pesan" rows="4"></textarea>
+
+    <button type="submit">Kirim Pesanan via WhatsApp</button>
+  </form>
+</section>
+
+<section id="alamat">
+  <h2>Alamat Kami</h2>
+  <p style="text-align:center;">
+    Jl. Tarantang-Harau No.8, dekat SMP 3 Tarantang, SMA 2 Harau, dan Zean Gas.
+  </p><br>
+  <iframe src="https://www.google.com/maps?q=Jl.+Tarantang-Harau+No.8&output=embed"></iframe>
+</section>
+
+<section id="kontak">
+  <h2>Kontak Kami</h2>
+  <p style="text-align:center;">Klik tombol di bawah untuk langsung chat dengan kami di WhatsApp.</p><br>
+  <div style="text-align:center;">
+    <a class="contact-button" href="https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20bertanya%20tentang%20layanan%20Zean%20Foto%20Copy" target="_blank">
+      Chat via WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Zean Foto Copy. All Rights Reserved.</p>
+</footer>
+
+<script>
+  function submitForm() {
+    const nama = document.getElementById('nama').value;
+    const nomor = document.getElementById('nomor').value;
+    const layanan = document.getElementById('layanan').value;
+    const pesan = document.getElementById('pesan').value;
+
+    const url = `https://wa.me/6281374448701?text=Halo,%20saya%20${nama},%20No.%20HP:%20${nomor}.%20Saya%20ingin%20memesan%20layanan%20${layanan}.%20${encodeURIComponent(pesan)}`;
+    window.open(url, '_blank');
+    return false;
+  }
+</script>
+
+</body>
+</html>
