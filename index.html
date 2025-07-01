@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zean Foto Copy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --primary: #89CFF0;
@@ -36,7 +36,8 @@
       background-color: var(--white);
       display: flex;
       justify-content: center;
-      gap: 30px;
+      flex-wrap: wrap;
+      gap: 20px;
       padding: 15px 0;
       position: sticky;
       top: 0;
@@ -57,7 +58,7 @@
     }
     section {
       padding: 70px 20px;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }
     section:nth-child(even) {
@@ -69,20 +70,29 @@
       margin-bottom: 30px;
       font-size: 32px;
     }
-    .menu-item {
-      display: flex;
-      align-items: center;
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
+    }
+    .menu-item {
       background-color: var(--white);
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-      flex-wrap: wrap;
+      text-align: center;
     }
     .menu-item img {
-      width: 180px;
+      width: 100%;
       border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .menu-item h3 {
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+    .menu-item p {
+      margin-bottom: 10px;
     }
     .menu-item button {
       background-color: var(--primary);
@@ -92,7 +102,6 @@
       border-radius: 8px;
       cursor: pointer;
       transition: transform 0.3s, background-color 0.3s;
-      margin-top: 10px;
     }
     .menu-item button:hover {
       background-color: var(--dark);
@@ -177,67 +186,57 @@
 <section id="tentang">
   <h2>Tentang Zean Foto Copy</h2>
   <p style="text-align: center;">
-    Zean Foto Copy adalah layanan fotocopy, cetak, dan pembayaran yang berlokasi di Jl. Tarantang-Harau No.8, dekat SMP 3 Tarantang, SMA 2 Harau, dan Zean Gas. Kami melayani berbagai kebutuhan Anda dengan cepat, mudah, dan terpercaya.
+    Zean Foto Copy adalah layanan fotocopy, cetak, dan pembayaran yang berlokasi di <b>Jl. Tarantang-Harau No.8</b>, dekat SMP 3 Tarantang, SMA 2 Harau, dan Zean Gas. Kami melayani berbagai kebutuhan Anda dengan cepat, mudah, dan terpercaya.
   </p>
 </section>
 
 <section id="menu">
   <h2>Menu yang Bisa Dipesan</h2>
+  <div class="menu-grid">
 
-  <div class="menu-item">
-    <img src="https://i.ibb.co/Ch3hNvx/setor-tarik.png" alt="Setor/Tarik Tunai">
-    <div>
-      <h3>Setor / Tarik Tunai</h3>
-      <p>Layanan setor atau tarik tunai cepat dan aman.</p>
-      <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20memesan%20Setor/Tarik%20Tunai')">Pesan via WhatsApp</button>
-    </div>
-  </div>
-
-  <div class="menu-item">
-    <img src="https://i.ibb.co/TMDpyLW/print.png" alt="Print">
-    <div>
-      <h3>Print</h3>
-      <p>Layanan print dokumen hitam putih atau warna berkualitas.</p>
-      <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20memesan%20Print')">Pesan via WhatsApp</button>
-    </div>
-  </div>
-
-  <div class="menu-item">
-    <img src="https://i.ibb.co/2FsfXqk/fotocopy.png" alt="Fotocopy">
-    <div>
+    <div class="menu-item">
+      <img src="https://i.ibb.co/W6KJXND/fotocopy.png" alt="Fotocopy">
       <h3>Fotocopy</h3>
       <p>Fotocopy dokumen dengan hasil tajam dan bersih.</p>
       <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20memesan%20Fotocopy')">Pesan via WhatsApp</button>
     </div>
-  </div>
 
-  <div class="menu-item">
-    <img src="https://i.ibb.co/vB2tnQW/pembayaran.png" alt="Pembayaran Tagihan">
-    <div>
+    <div class="menu-item">
+      <img src="https://i.ibb.co/zJjKm5D/print.png" alt="Print">
+      <h3>Print</h3>
+      <p>Print dokumen hitam putih atau warna berkualitas.</p>
+      <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20memesan%20Print')">Pesan via WhatsApp</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://i.ibb.co/fFtcj49/setor-tarik.png" alt="Setor/Tarik Tunai">
+      <h3>Setor / Tarik Tunai</h3>
+      <p>Layanan setor atau tarik tunai cepat dan aman.</p>
+      <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20memesan%20Setor/Tarik%20Tunai')">Pesan via WhatsApp</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://i.ibb.co/yRmrY1W/pembayaran.png" alt="Pembayaran">
       <h3>Pembayaran Tagihan</h3>
       <p>Bayar tagihan PDAM, PLN, dan lainnya dengan mudah.</p>
       <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20membayar%20tagihan')">Pesan via WhatsApp</button>
     </div>
-  </div>
 
-  <div class="menu-item">
-    <img src="https://i.ibb.co/ZK9nbF2/gas.png" alt="Gas">
-    <div>
+    <div class="menu-item">
+      <img src="https://i.ibb.co/8YyMK56/gas.png" alt="Gas">
       <h3>Gas</h3>
-      <p>Pembelian Gas untuk kebutuhan rumah tangga. Klik tombol untuk menuju website.</p>
+      <p>Pembelian gas untuk kebutuhan rumah tangga. Klik tombol untuk menuju website.</p>
       <button onclick="window.location.href='https://example.com'">Kunjungi Website Gas</button>
     </div>
-  </div>
 
-  <div class="menu-item">
-    <img src="https://i.ibb.co/09xqg0j/lainnya.png" alt="Lainnya">
-    <div>
+    <div class="menu-item">
+      <img src="https://i.ibb.co/k55FL4c/lainnya.png" alt="Lainnya">
       <h3>Dan Lain-Lain</h3>
       <p>Layanan lainnya sesuai kebutuhan Anda. Silakan hubungi kami.</p>
       <button onclick="window.open('https://wa.me/6281374448701?text=Halo,%20saya%20ingin%20menanyakan%20layanan%20lainnya')">Pesan via WhatsApp</button>
     </div>
-  </div>
 
+  </div>
 </section>
 
 <section id="form">
@@ -270,7 +269,7 @@
 <section id="alamat">
   <h2>Alamat Kami</h2>
   <p style="text-align:center;">
-    Jl. Tarantang-Harau No.8, dekat SMP 3 Tarantang, SMA 2 Harau, dan Zean Gas.
+    <b>Jl. Tarantang-Harau No.8</b>, dekat SMP 3 Tarantang, SMA 2 Harau, dan Zean Gas.
   </p><br>
   <iframe src="https://www.google.com/maps?q=Jl.+Tarantang-Harau+No.8&output=embed"></iframe>
 </section>
